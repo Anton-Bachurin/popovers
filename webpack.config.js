@@ -12,7 +12,8 @@ module.exports = {
     },
     mode: 'development',
     devServer: {
-        static: false,
+        port: 9000,
+        //static: false,
     },
     entry: './src/index.js',
     devtool: 'inline-source-map',
