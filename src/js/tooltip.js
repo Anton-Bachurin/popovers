@@ -19,7 +19,6 @@ export class Tooltip {
 
         const { left, height, width, bottom } = element.getBoundingClientRect();
         tooltipElement.style.left = left - (width / 2) + 94 + 'px'; 
-        //tooltipElement.style.left = left - (width / 2) + (tooltipElement.offsetWidth / 2) + 'px'; 
         tooltipElement.style.bottom = bottom + height - 10 + 'px';
     }
 
@@ -28,4 +27,6 @@ export class Tooltip {
         tooltipToDelete.remove();
     }
 }
+
+
 

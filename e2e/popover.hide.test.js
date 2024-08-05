@@ -16,7 +16,7 @@ describe('Page start', () => {
         page = await browser.newPage();
     });
 
-    test('Popover should be shown', async () => {
+    test('Popover should be hidden', async () => {
         await page.goto('http://localhost:9000');
 
         const btn = await page.$('.btn');
@@ -24,6 +24,10 @@ describe('Page start', () => {
         await btn.click();
 
         await page.waitForSelector('.tooltip-message');
+
+        await btn.click();
+
+        await page.waitForSelector('.tooltip-message') === null;
     });
 
     afterEach(async () => {
